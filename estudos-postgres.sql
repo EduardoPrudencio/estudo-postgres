@@ -16,7 +16,7 @@
 	-- with password '123456'
 	
 	/* com validade de senha */
-	-- valid util  '2022-03-01'
+	-- valid until  '2022-03-01'
 	
 	/* com permissãoo para criar bancos */
 	--createdb
@@ -33,9 +33,27 @@
 	/* em um grupo existente */
 	-- in group development
 	
+	/* alterando o nome */
+	-- alter user rename teste to tester-member
+
+	/* alterando a senha */
+	-- alter user teste with password '12345678' 
+	
+	/* alterando a data de validade */
+	-- alter user valid until '2022-04-01'
+
+	/* fazendo um oassword válido para sempre */
+	-- alter user teste valid until 'infinity'
+
+	/* Removendo usuário */
+	-- drop user teste
+
 	/* exibindo usuário corrente */
 	-- select current_user
-	
+
+	/* exibindo usuários do banco de dados */
+	-- select usename from pg_user
+
 
 /* USUÁRIOS */
 
